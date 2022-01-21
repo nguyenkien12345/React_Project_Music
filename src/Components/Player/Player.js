@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react'
-import Details from './Details';
+import React, { useEffect, useRef, useState } from 'react';
 import Controls from './Controls';
+import Details from './Details';
 
 function Player({songs, currentSongIndex, setCurrentSongIndex, nextSongIndex}) {
 
@@ -12,24 +12,20 @@ function Player({songs, currentSongIndex, setCurrentSongIndex, nextSongIndex}) {
            setCurrentSongIndex(() => {
             let temp = currentSongIndex;
             temp++
-
             if(temp > songs.length - 1){
                 temp = 0;
             }
-
             return temp;
-           });
+        });
         }
         else{
             setCurrentSongIndex(() => {
-                let temp = currentSongIndex;
-                temp--;
-
-                if(temp < 0){
-                    temp = songs.length - 1;
-                }
-
-                return temp;
+             let temp = currentSongIndex;
+             temp--;
+             if(temp < 0){
+                temp = songs.length - 1;
+            }
+            return temp;
             })
         }
     }

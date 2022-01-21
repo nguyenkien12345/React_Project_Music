@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Player from './Components/Player/Player';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import Player from './Components/Player/Player';
 
 function App() {
 
@@ -51,8 +51,9 @@ function App() {
       <Player 
               songs={songs} 
               currentSongIndex={currentSongIndex} 
+              nextSongIndex={nextSongIndex}
               setCurrentSongIndex={setCurrentSongIndex} 
-              nextSongIndex={nextSongIndex}/>
+      />
     </div>
   );
 }

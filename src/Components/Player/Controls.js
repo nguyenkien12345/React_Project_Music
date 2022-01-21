@@ -1,6 +1,6 @@
-import React from 'react';
+import { faBackward, faForward, faPause, faPlay } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faForward, faBackward, faPause } from '@fortawesome/free-solid-svg-icons';
+import React from 'react';
 
 function Controls({isPlaying, setIsPlaying, SkipSong}) {
     return (
